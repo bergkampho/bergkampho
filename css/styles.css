@@ -99,15 +99,6 @@ body {
 }
 
 /* Specific style of section */
-
-/*a:hover.ocean-nav [class^="icon-"]{
-	-webkit-transform:translateY(10px);
-}
-
-a:hover.ocean-nav:after{
-	content:"Contact";
-}*/
-
 #about img{
     width: 240px;  
     text-align: right;
