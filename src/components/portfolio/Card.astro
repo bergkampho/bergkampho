@@ -1,0 +1,41 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  image: ImageMetadata;
+  title: string;
+  tags: string[];
+}
+
+const { tags, title, image } = Astro.props;
+---
+
+<div class="col-xs-12 col-sm-6 col-md-4">
+  <div class="thumbnail wow fadeInUp">
+    <Image src={image} alt={title} />
+    <div class="caption">
+      <h4>{title}</h4>
+      {tags.map((item) => <span class="tag">#{item}</span>)}
+    </div>
+  </div>
+</div>
+
+<style>
+  .thumbnail {
+    padding: 0.5rem;
+    border-radius: 0;
+    border: 0;
+    margin: 1.5rem 0;
+    box-shadow: 0 16px 8px -8px rgba(0, 0, 0, 0.2);
+
+    .caption [class^="icon-"] {
+      font-size: 0.7em;
+    }
+  }
+
+  .tag {
+    font-weight: 700;
+    margin-left: 0.5rem;
+    color: #504a46;
+  }
+</style>

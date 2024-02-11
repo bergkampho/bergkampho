@@ -1,0 +1,58 @@
+---
+import Project from "./Card.astro";
+import ImgPampers from "./img/pampers-lf.jpg";
+import ImgVictionary from "./img/victionary.jpg";
+import ImgIpc from "./img/ipcfoodlab.jpg";
+import ImgFlipbook from "./img/flipbook.jpeg";
+import ImgHanbo from "./img/hanbo.jpg";
+import ImgGift from "./img/gift.jpg";
+---
+
+<section id="portfolio" class="lemon">
+  <div class="container-fluid text-center">
+    <h1 class="wow flipInX">Recent projects</h1>
+
+    <div class="row">
+      <Project
+        image={ImgPampers}
+        title="Pampers Songify Campaign"
+        tags={["responsive", "angularjs", "tweenmax"]}
+      />
+      <Project
+        image={ImgVictionary}
+        title="viction:ary Online Store"
+        tags={["woocommerce", "css", "wordpress"]}
+      />
+      <Project
+        image={ImgIpc}
+        title="IPC++ Foodlab CMS"
+        tags={["responsive", "wordpress"]}
+      />
+      <Project
+        image={ImgFlipbook}
+        title="AIA Flipbook"
+        tags={["js", "turnjs"]}
+      />
+      <Project
+        image={ImgHanbo}
+        title="Hanbo Enterprises Limited Website"
+        tags={["wordpress", "bootstrap"]}
+      />
+      <Project
+        image={ImgGift}
+        title="Global Institute For Tomorrow Website"
+        tags={["html", "css", "slidesjs"]}
+      />
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <p class="wow fadeIn">
+          <a href="#contact" class="call-for-action">
+            <i class="icon-thumbs-up"></i> Hire me
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
