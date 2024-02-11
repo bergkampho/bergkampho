@@ -1,4 +1,6 @@
 ---
+import GoogleTagManager from "../components/GoogleTagManager.astro";
+import GoogleTagManagerNoScript from "../components/GoogleTagManagerNoScript.astro";
 import PortfolioSection from "../components/portfolio/PortfolioSection.astro";
 ---
 
@@ -19,6 +21,8 @@ import PortfolioSection from "../components/portfolio/PortfolioSection.astro";
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="generator" content={Astro.generator} />
 
+    <GoogleTagManager />
+
     <link rel="shortcut icon" href="img/favicon.ico" />
 
     <title>Bergkamp Ho</title>
@@ -33,6 +37,7 @@ import PortfolioSection from "../components/portfolio/PortfolioSection.astro";
     <link href="css/styles.css" rel="stylesheet" />
   </head>
   <body id="body" data-spy="scroll" data-target=".navbar" data-offset="50">
+    <GoogleTagManagerNoScript />
     <div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
