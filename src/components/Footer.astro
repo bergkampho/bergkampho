@@ -1,0 +1,56 @@
+---
+const thisYear = new Date().getFullYear();
+---
+
+<style>
+  footer {
+    background: #283641;
+    color: var(--body-color-light);
+    padding: 1.5em 0 1em;
+
+    p {
+      font-size: 16px;
+    }
+  }
+
+  .social {
+    a {
+      margin-right: 1rem;
+      color: var(--body-color-light);
+
+      :hover {
+        color: var(--color-lemon);
+      }
+    }
+  }
+</style>
+<footer class="container-fuild text-center">
+  <p>
+    <i class="icon-cog icon-spin"></i>
+    Made by Bergkamp Ho &copy; 2013-{thisYear}.
+  </p>
+
+  <p class="social">
+    <a
+      data-track-label="Facebook"
+      target="_blank"
+      href="http://www.facebook.com/bergkampho"
+    >
+      <i class="icon-facebook-sign icon-2x"></i>
+    </a>
+    <a
+      data-track-label="Instagram"
+      target="_blank"
+      href="http://www.instagram.com/bergkampho"
+    >
+      <i class="icon-instagram icon-2x"></i>
+    </a>
+    <a
+      data-track-label="GitHub"
+      target="_blank"
+      href="http://github.com/bergkampho"
+    >
+      <i class="icon-github icon-2x"></i>
+    </a>
+  </p>
+</footer>

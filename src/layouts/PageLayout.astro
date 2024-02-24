@@ -1,139 +1,18 @@
 ---
-import { ViewTransitions } from "astro:transitions";
-
-import GlobalStyles from "../components/GlobalStyles.astro";
-import GoogleTagManager from "../components/GoogleTagManager.astro";
+import Footer from "../components/Footer.astro";
 import GoogleTagManagerNoScript from "../components/GoogleTagManagerNoScript.astro";
-
-const { title } = Astro.props;
+import Head from "../components/Head.astro";
+import Navbar from "../components/Navbar.astro";
 ---
 
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Hello! I'm Wayne. Bergkamp Ho is my network ID. I'm a Web Developer with 14+ years of experience in marketing and advertising industry.Nice to meet you."
-    />
-    <meta
-      name="keywords"
-      content="Bergkamp Ho, bho, fung, freelance, siufung, bergkampho, bergkamp, html production, javascript,job, web, shopping cart"
-    />
-    <meta name="author" content="Bergkamp Ho" />
-    <meta property="og:image" content="img/avatar.jpg" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="generator" content={Astro.generator} />
-
-    <GoogleTagManager />
-
-    <link rel="shortcut icon" href="img/favicon.ico" />
-
-    <title>{title}</title>
-
-    <link
-      href="//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link href="/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="/css/font-awesome.min.css" rel="stylesheet" />
-    <GlobalStyles />
-    <ViewTransitions />
-  </head>
-  <body
-    id="body"
-    data-spy={Astro.url.pathname === "/" ? "scroll" : undefined}
-    data-target=".navbar"
-    data-offset="50"
-  >
+  <Head title={Astro.props.title} />
+  <body id="about">
     <GoogleTagManagerNoScript />
-
-    <div class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button
-            type="button"
-            class="navbar-toggle"
-            data-track-label="Nav Toggle"
-            data-toggle="collapse"
-            data-target=".navbar-collapse"
-          >
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="/">Bergkamp Ho</a>
-        </div>
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li class={Astro.url.pathname === "/" ? "active" : undefined}>
-              <a href="#body">About</a>
-            </li>
-            <li><a class="salmon-nav" href="#skills">Skills</a></li>
-            <li
-              class={Astro.url.pathname.indexOf("portfolios") !== -1
-                ? "active"
-                : undefined}
-            >
-              <a class="lemon-nav" href="#portfolio">Portfolio</a>
-            </li>
-            <li><a class="ocean-nav" href="#contact">Contact</a></li>
-          </ul>
-        </div>
-        <!--/.nav-collapse -->
-      </div>
-    </div>
+    <Navbar />
 
     <slot />
 
-    <footer>
-      <div class="">
-        <div class="container text-center">
-          <p>
-            <i class="icon-cog icon-spin"></i>
-            Made by Bergkamp Ho © 2013-2024.
-          </p>
-
-          <p class="social">
-            <a
-              data-track-label="Facebook"
-              target="_blank"
-              href="http://www.facebook.com/bergkampho"
-              ><i class="icon-facebook-sign icon-2x"></i></a
-            >
-            <a
-              data-track-label="Instagram"
-              target="_blank"
-              href="http://instagram.com/bergkampho"
-              ><i class="icon-instagram icon-2x"></i></a
-            >
-          </p>
-        </div>
-      </div>
-    </footer>
-    <div class="scroll-up">
-      <a href="#body" title="Go to top" data-track-label="Go to top">
-        <i class="icon-chevron-up"></i>
-      </a>
-    </div>
-    <script src="/js/libs.min.js" is:inline></script>
-    <script is:raw>
-      document.querySelectorAll(".nav a").forEach((link) => {
-        link.addEventListener("touchend", () => {
-          document.querySelector(".navbar-toggle").click();
-        });
-      });
-
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 100) {
-          document.querySelector(".scroll-up").style.display = "block";
-          document.querySelector(".navbar").classList.add("sticky");
-        } else {
-          document.querySelector(".scroll-up").style.display = "none";
-          document.querySelector(".navbar").classList.remove("sticky");
-        }
-      });
-    </script>
+    <Footer />
   </body>
 </html>

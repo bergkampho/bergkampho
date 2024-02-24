@@ -1,0 +1,77 @@
+<div class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button
+        type="button"
+        class="navbar-toggle"
+        data-track-label="Nav Toggle"
+        data-toggle="collapse"
+        data-target=".navbar-collapse"
+      >
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Bergkamp Ho</a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li class:list={[{ active: Astro.url.pathname === "/" }]}>
+          <a href="#about">About</a>
+        </li>
+        <li><a class="salmon-nav" href="#skills">Skills</a></li>
+        <li
+          class:list={[
+            { active: Astro.url.pathname.indexOf("portfolios") !== -1 },
+          ]}
+        >
+          <a class="lemon-nav" href="#portfolio">Portfolio</a>
+        </li>
+        <li><a class="ocean-nav" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<script src="/js/libs.min.js" is:inline></script>
+
+<script is:raw>
+  function init() {
+    window.addEventListener("scroll", handleScroll);
+
+    document.querySelectorAll(".nav a").forEach((link) => {
+      link.addEventListener("touchend", () => {
+        // Close toggle when nav item was clicked
+        document.querySelector(".navbar-toggle").click();
+      });
+    });
+  }
+  function handleScroll() {
+    // Handle sticky navbar
+    if (window.scrollY > 100) {
+      document.querySelector(".scroll-up").style.display = "block";
+      document.querySelector(".navbar").classList.add("sticky");
+    } else {
+      document.querySelector(".scroll-up").style.display = "none";
+      document.querySelector(".navbar").classList.remove("sticky");
+    }
+
+    // Handle active navbar item
+    const sections = document.querySelectorAll("section");
+    const scrollLinks = document.querySelectorAll(".nav li");
+
+    const scrollPosition = window.scrollY;
+
+    sections.forEach((section, index) => {
+      const sectionTop = section.offsetTop - 80; // Adjusted for better visibility
+      const sectionBottom = sectionTop + section.offsetHeight;
+
+      if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+        // Highlight the corresponding navigation link
+        scrollLinks.forEach((link) => link.classList.remove("active"));
+        scrollLinks[index].classList.add("active");
+      }
+    });
+  }
+  init();
+  window.addEventListener("astro:beforeload", init);
+</script>

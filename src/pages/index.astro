@@ -1,31 +1,11 @@
 ---
+import AboutSection from "@components/AboutSection.astro";
 import PortfolioSection from "@components/portfolio/PortfolioSection.astro";
 import PageLayout from "@layouts/PageLayout.astro";
 ---
 
 <PageLayout title="Bergkamp Ho">
-  <section id="about" class="">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-sm-5 col-md-5 avatar">
-          <img class="img-circle" src="/img/avatar.jpg" alt="It's Fung." />
-        </div>
-        <article class="col-xs-12 col-sm-5 col-md-5">
-          <h1>Hello! I'm Wayne.</h1>
-          <p>
-            Bergkamp Ho is my network ID.<br />I'm a Web Developer with 14+
-            years of experience in marketing and advertising industry.<br />Nice
-            to meet you.
-          </p>
-          <p>
-            <a href="#contact"
-              >Get in touch <i class="icon-angle-down anim-up-down"></i></a
-            >
-          </p>
-        </article>
-      </div>
-    </div>
-  </section>
+  <AboutSection />
 
   <section id="skills" class="salmon">
     <div class="container">
@@ -140,4 +120,9 @@ import PageLayout from "@layouts/PageLayout.astro";
       </p>
     </article>
   </section>
+  <div class="scroll-up">
+    <a href="#about" title="Go to top" data-track-label="Go to top">
+      <i class="icon-chevron-up"></i>
+    </a>
+  </div>
 </PageLayout>

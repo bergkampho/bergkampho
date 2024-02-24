@@ -1,0 +1,41 @@
+---
+import { ViewTransitions } from "astro:transitions";
+
+import GlobalStyles from "../components/GlobalStyles.astro";
+import GoogleTagManager from "../components/GoogleTagManager.astro";
+
+const { title } = Astro.props;
+---
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Hello! I'm Wayne. Bergkamp Ho is my network ID. I'm a Web Developer with 14+ years of experience in marketing and advertising industry.Nice to meet you."
+  />
+  <meta
+    name="keywords"
+    content="Bergkamp Ho, bho, fung, freelance, siufung, bergkampho, bergkamp, html production, javascript,job, web, shopping cart"
+  />
+  <meta name="author" content="Bergkamp Ho" />
+  <meta property="og:image" content="img/avatar.jpg" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content={Astro.generator} />
+
+  <GoogleTagManager />
+
+  <link rel="shortcut icon" href="img/favicon.ico" />
+
+  <title>{title}</title>
+
+  <link
+    href="//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link href="/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="/css/font-awesome.min.css" rel="stylesheet" />
+  <GlobalStyles />
+  <ViewTransitions />
+</head>
