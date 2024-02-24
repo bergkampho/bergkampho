@@ -1,255 +1,143 @@
 ---
-import GoogleTagManager from "../components/GoogleTagManager.astro";
-import GoogleTagManagerNoScript from "../components/GoogleTagManagerNoScript.astro";
-import PortfolioSection from "../components/portfolio/PortfolioSection.astro";
+import PageLayout from "@layouts/PageLayout.astro";
+import PortfolioSection from "@components/portfolio/PortfolioSection.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Hello! I'm Wayne. Bergkamp Ho is my network ID. I'm a Web Developer with 14+ years of experience in marketing and advertising industry.Nice to meet you."
-    />
-    <meta
-      name="keywords"
-      content="Bergkamp Ho, bho, fung, freelance, siufung, bergkampho, bergkamp, html production, javascript,job, web, shopping cart"
-    />
-    <meta name="author" content="Bergkamp Ho" />
-    <meta property="og:image" content="img/avatar.jpg" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="generator" content={Astro.generator} />
-
-    <GoogleTagManager />
-
-    <link rel="shortcut icon" href="img/favicon.ico" />
-
-    <title>Bergkamp Ho</title>
-
-    <link
-      href="//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/font-awesome.min.css" rel="stylesheet" />
-    <link href="css/styles.css" rel="stylesheet" />
-  </head>
-  <body id="body" data-spy="scroll" data-target=".navbar" data-offset="50">
-    <GoogleTagManagerNoScript />
-    <div class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button
-            type="button"
-            class="navbar-toggle"
-            data-track-label="Nav Toggle"
-            data-toggle="collapse"
-            data-target=".navbar-collapse"
-          >
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="">Bergkamp Ho</a>
+<PageLayout title="Bergkamp Ho">
+  <section id="about" class="">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-5 col-md-5 avatar">
+          <img class="img-circle" src="/img/avatar.jpg" alt="It's Fung." />
         </div>
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="#body">About</a></li>
-            <li><a class="salmon-nav" href="#skills">Skills</a></li>
-            <li><a class="lemon-nav" href="#portfolio">Portfolio</a></li>
-            <li><a class="ocean-nav" href="#contact">Contact</a></li>
-          </ul>
-        </div>
-        <!--/.nav-collapse -->
-      </div>
-    </div>
-
-    <section id="about" class="">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12 col-sm-5 col-md-5 avatar">
-            <img class="img-circle" src="img/avatar.jpg" alt="It's Fung." />
-          </div>
-          <article class="col-xs-12 col-sm-5 col-md-5">
-            <h1>Hello! I'm Wayne.</h1>
-            <p>
-              Bergkamp Ho is my network ID.<br />I'm a Web Developer with 14+
-              years of experience in marketing and advertising industry.<br
-              />Nice to meet you.
-            </p>
-            <p>
-              <a href="#contact"
-                >Get in touch <i class="icon-angle-down anim-up-down"></i></a
-              >
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills" class="salmon">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12 col-sm-4 col-md-4">
-            <h1 class="text-center wow flipInX">Front-end development</h1>
-            <div
-              class="front-end-icon icon-wrapper icon-3x text-center wow fadeIn"
-            >
-              <i class="icon-html5"></i>
-              <i class="icon-css3"></i>
-              <i class="icon-mobile-phone"></i>
-              <i class="icon-desktop"></i>
-            </div>
-            <div class="wow fadeIn">
-              <p>I'm fluent with HTML, CSS and JavaScript.</p>
-              <p>
-                I love mobile. I make website responsive to any type of device
-                or any screen size.
-              </p>
-              <p>
-                I can build HTML prototype based on raw images, implement
-                effects with pure CSS3 or jQuery for complex animation.
-              </p>
-              <p class="small">
-                P.S. Recently I've been learning mobile app development. I'm
-                open to join any start-up project for free to get experience.
-              </p>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-4 col-md-4">
-            <h1 class="text-center wow flipInX">Back-end development</h1>
-            <div
-              class="back-end-icon icon-wrapper icon-3x text-center wow fadeIn"
-            >
-              <i class="icon-github"></i>
-              <i class="icon-code"></i>
-              <i class="icon-sitemap"></i>
-              <i class="icon-shopping-cart" style="font-size: 0.9em;"></i>
-            </div>
-            <div class="wow fadeIn">
-              <p>
-                I'm a open source lover and experienced with Linux Apache MySQL
-                PHP environment.
-              </p>
-              <p>
-                I'm able to implement websites with custom business logic such
-                as Content Management System or shopping cart with payment
-                gateway integration.
-              </p>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-4 col-md-4">
-            <h1 class="text-center wow flipInX">3rd-party integration</h1>
-            <div
-              class="3rd-party-icon icon-wrapper icon-3x text-center wow fadeIn"
-            >
-              <i class="icon-facebook"></i>
-              <i class="icon-thumbs-up-alt"></i>
-              <i class="icon-twitter"></i>
-              <i class="icon-bar-chart"></i>
-            </div>
-            <div class="wow fadeIn">
-              <p>
-                I'm also familiar with integration of famous social platform
-                like Facebook, Twitter and WeChat. Making use of the social
-                platform plugins or APIs to increase visitor engagement.
-              </p>
-              <p>
-                As well, I can implement tracking to the website in order to
-                analyse visitor behaviors.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <p class="wow fadeIn">
-              <a href="#portfolio" class="call-for-action"
-                ><i class="icon-briefcase"></i> see my work</a
-              >
-            </p>
-          </div>
-        </div>
-      </div>
-      <!-- /.container -->
-    </section>
-
-    <PortfolioSection />
-
-    <section id="contact" class="ocean">
-      <article class="container text-center">
-        <h1 class="wow flipInX">
-          <i class="icon-heart"></i> I'm Available for Full-time or Freelance Work
-        </h1>
-        <p class="wow flipInX">
-          Please send me email at
-          <a href="mailto:hello@bergkampho.com"
-            ><span><i class="icon-envelope"></i> hello@bergkampho.com</span></a
-          >. You can also view my
-          <a target="_blank" href="http://www.linkedin.com/in/bergkampho"
-            ><span><i class="icon-linkedin-sign"></i> LinkedIn</span></a
-          >
-          profile.
-        </p>
-
-        <p class="wow flipInY">
-          <a data-track-label="Why me" href="#skills" class=""
-            ><span class="why"></span></a
-          >
-        </p>
-      </article>
-    </section>
-
-    <footer>
-      <div class="">
-        <div class="container text-center">
+        <article class="col-xs-12 col-sm-5 col-md-5">
+          <h1>Hello! I'm Wayne.</h1>
           <p>
-            <i class="icon-cog icon-spin"></i>
-            Made by Bergkamp Ho © 2013-2024.
+            Bergkamp Ho is my network ID.<br />I'm a Web Developer with 14+
+            years of experience in marketing and advertising industry.<br />Nice
+            to meet you.
           </p>
-
-          <p class="social">
-            <a
-              data-track-label="Facebook"
-              target="_blank"
-              href="http://www.facebook.com/bergkampho"
-              ><i class="icon-facebook-sign icon-2x"></i></a
+          <p>
+            <a href="#contact"
+              >Get in touch <i class="icon-angle-down anim-up-down"></i></a
             >
-            <a
-              data-track-label="Instagram"
-              target="_blank"
-              href="http://instagram.com/bergkampho"
-              ><i class="icon-instagram icon-2x"></i></a
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="salmon">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <h1 class="text-center wow flipInX">Front-end development</h1>
+          <div
+            class="front-end-icon icon-wrapper icon-3x text-center wow fadeIn"
+          >
+            <i class="icon-html5"></i>
+            <i class="icon-css3"></i>
+            <i class="icon-mobile-phone"></i>
+            <i class="icon-desktop"></i>
+          </div>
+          <div class="wow fadeIn">
+            <p>I'm fluent with HTML, CSS and JavaScript.</p>
+            <p>
+              I love mobile. I make website responsive to any type of device or
+              any screen size.
+            </p>
+            <p>
+              I can build HTML prototype based on raw images, implement effects
+              with pure CSS3 or jQuery for complex animation.
+            </p>
+            <p class="small">
+              P.S. Recently I've been learning mobile app development. I'm open
+              to join any start-up project for free to get experience.
+            </p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <h1 class="text-center wow flipInX">Back-end development</h1>
+          <div
+            class="back-end-icon icon-wrapper icon-3x text-center wow fadeIn"
+          >
+            <i class="icon-github"></i>
+            <i class="icon-code"></i>
+            <i class="icon-sitemap"></i>
+            <i class="icon-shopping-cart" style="font-size: 0.9em;"></i>
+          </div>
+          <div class="wow fadeIn">
+            <p>
+              I'm a open source lover and experienced with Linux Apache MySQL
+              PHP environment.
+            </p>
+            <p>
+              I'm able to implement websites with custom business logic such as
+              Content Management System or shopping cart with payment gateway
+              integration.
+            </p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <h1 class="text-center wow flipInX">3rd-party integration</h1>
+          <div
+            class="3rd-party-icon icon-wrapper icon-3x text-center wow fadeIn"
+          >
+            <i class="icon-facebook"></i>
+            <i class="icon-thumbs-up-alt"></i>
+            <i class="icon-twitter"></i>
+            <i class="icon-bar-chart"></i>
+          </div>
+          <div class="wow fadeIn">
+            <p>
+              I'm also familiar with integration of famous social platform like
+              Facebook, Twitter and WeChat. Making use of the social platform
+              plugins or APIs to increase visitor engagement.
+            </p>
+            <p>
+              As well, I can implement tracking to the website in order to
+              analyse visitor behaviors.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p class="wow fadeIn">
+            <a href="#portfolio" class="call-for-action"
+              ><i class="icon-briefcase"></i> see my work</a
             >
           </p>
         </div>
       </div>
-    </footer>
-    <div class="scroll-up">
-      <a href="#body" title="Go to top" data-track-label="Go to top">
-        <i class="icon-chevron-up"></i>
-      </a>
     </div>
-    <script src="js/libs.min.js" is:inline></script>
-    <script is:raw>
-      document.querySelectorAll(".nav a").forEach((link) => {
-        link.addEventListener("touchend", () => {
-          document.querySelector(".navbar-toggle").click();
-        });
-      });
+    <!-- /.container -->
+  </section>
 
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 100) {
-          document.querySelector(".scroll-up").style.display = "block";
-          document.querySelector(".navbar").classList.add("sticky");
-        } else {
-          document.querySelector(".scroll-up").style.display = "none";
-          document.querySelector(".navbar").classList.remove("sticky");
-        }
-      });
-    </script>
-  </body>
-</html>
+  <PortfolioSection />
+
+  <section id="contact" class="ocean">
+    <article class="container text-center">
+      <h1 class="wow flipInX">
+        <i class="icon-heart"></i> I'm Available for Full-time or Freelance Work
+      </h1>
+      <p class="wow flipInX">
+        Please send me email at
+        <a href="mailto:hello@bergkampho.com"
+          ><span><i class="icon-envelope"></i> hello@bergkampho.com</span></a
+        >. You can also view my
+        <a target="_blank" href="http://www.linkedin.com/in/bergkampho"
+          ><span><i class="icon-linkedin-sign"></i> LinkedIn</span></a
+        >
+        profile.
+      </p>
+
+      <p class="wow flipInY">
+        <a data-track-label="Why me" href="#skills" class=""
+          ><span class="why"></span></a
+        >
+      </p>
+    </article>
+  </section>
+</PageLayout>
