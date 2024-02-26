@@ -1,0 +1,54 @@
+<style>
+  section {
+    background-image: none;
+    padding-top: 50px;
+    line-height: 1;
+
+    @media (min-width: 768px) {
+      min-height: 100vh;
+      text-align: left;
+    }
+  }
+  img {
+    width: 50%;
+    max-width: 240px;
+
+    @media (min-width: 768px) {
+      width: 240px;
+    }
+  }
+
+  .avatar {
+    -webkit-animation: move-right 0.8s ease-out 0.2s backwards;
+
+    @media (min-width: 768px) {
+      text-align: right;
+    }
+  }
+
+  article {
+    -webkit-animation: move-left 0.8s ease-out 0.2s backwards;
+  }
+</style>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-5 col-md-5 avatar">
+        <img class="img-circle" src="/img/avatar.jpg" alt="It's Fung." />
+      </div>
+      <article class="col-xs-12 col-sm-5 col-md-5">
+        <h1>Hello! I'm Wayne.</h1>
+        <p>
+          Bergkamp Ho is my network ID.<br />I'm a Web Developer with 14+ years
+          of experience in marketing and advertising industry.<br />Nice to meet
+          you.
+        </p>
+        <p>
+          <a href="#contact">
+            Get in touch <i class="icon-angle-down anim-up-down"></i>
+          </a>
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
