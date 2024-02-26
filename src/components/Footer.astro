@@ -13,42 +13,48 @@ const thisYear = new Date().getFullYear();
     }
   }
 
-  .social {
-    a {
-      margin-right: 1rem;
-      color: var(--body-color-light);
+  a {
+    color: var(--body-color-light);
 
-      :hover {
-        color: var(--color-lemon);
-      }
+    :hover {
+      color: var(--color-lemon);
     }
+  }
+
+  .social a {
+    margin-right: 1rem;
   }
 </style>
 <footer class="container-fuild text-center">
   <p>
-    <i class="icon-cog icon-spin"></i>
-    Made by Bergkamp Ho &copy; 2013-{thisYear}.
+    <a
+      data-track-label="Bho GitHub"
+      target="_blank"
+      href="https://github.com/bergkampho/bergkampho"
+      title="Under the hood"><i class="icon-cog icon-spin"></i></a
+    >
+    Made in HK and revamped in the UK. &copy; 2013-{thisYear} Bergkamp Ho.
   </p>
 
   <p class="social">
     <a
       data-track-label="Facebook"
       target="_blank"
-      href="http://www.facebook.com/bergkampho"
+      href="https://www.facebook.com/bergkampho"
     >
       <i class="icon-facebook-sign icon-2x"></i>
     </a>
     <a
       data-track-label="Instagram"
       target="_blank"
-      href="http://www.instagram.com/bergkampho"
+      href="https://www.instagram.com/bergkampho"
     >
       <i class="icon-instagram icon-2x"></i>
     </a>
     <a
       data-track-label="GitHub"
       target="_blank"
-      href="http://github.com/bergkampho"
+      href="https://github.com/bergkampho"
     >
       <i class="icon-github icon-2x"></i>
     </a>

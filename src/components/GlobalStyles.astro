@@ -9,6 +9,7 @@
     --color-grey-dark: #504a46;
     --body-color-dark: var(--color-grey-dark);
     --body-color-light: var(--color-grey-light);
+    ---font-size: 21px;
   }
 
   html {
@@ -28,8 +29,8 @@
   body,
   p {
     font-family: "Open Sans Condensed", "Sans Serif", "Georgia", serif;
-    font-weight: 300px;
-    font-size: 21px;
+    font-weight: 300;
+    font-size: var(---font-size);
     line-height: 1.4;
   }
   .nav,
@@ -154,8 +155,7 @@ a:hover.ocean-nav:after{
     margin: auto;
     display: flex;
     align-items: center;
-    /*height: auto;
-   */
+    /*height: auto;*/
     width: 100%;
   }
   @media (min-width: 767px) {

@@ -2,13 +2,20 @@
   section {
     background-image: none;
     padding-top: 50px;
-    line-height: 1;
 
     @media (min-width: 768px) {
       min-height: 100vh;
       text-align: left;
     }
   }
+
+  .row-flex {
+    @media (min-width: 768px) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
   img {
     width: 50%;
     max-width: 240px;
@@ -29,19 +36,54 @@
   article {
     -webkit-animation: move-left 0.8s ease-out 0.2s backwards;
   }
+
+  h1 {
+    margin-bottom: 0;
+  }
+
+  h2 {
+    margin-top: 2px;
+    font-size: 1.5rem;
+  }
+
+  @keyframes wave {
+    0%,
+    25%,
+    75%,
+    100% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(30deg);
+    }
+  }
+
+  .waving-hand {
+    display: inline-block;
+    animation: wave 3s infinite;
+  }
 </style>
 <section>
   <div class="container">
-    <div class="row">
+    <div class="row row-flex">
       <div class="col-xs-12 col-sm-5 col-md-5 avatar">
         <img class="img-circle" src="/img/avatar.jpg" alt="It's Fung." />
       </div>
       <article class="col-xs-12 col-sm-5 col-md-5">
-        <h1>Hello! I'm Wayne.</h1>
+        <h1>Hello! I'm Wayne. <span class="waving-hand">👋</span></h1>
+        <h2>Bergkamp Ho is my network ID.</h2>
         <p>
-          Bergkamp Ho is my network ID.<br />I'm a Web Developer with 14+ years
-          of experience in marketing and advertising industry.<br />Nice to meet
-          you.
+          I'm a Fullstack Web Developer with 14+ years of experience in fintech,
+          software engineering and marketing industry.
+        </p>
+        <p>
+          I've refined my skills in building beautiful and functional
+          interfaces. This includes everything from the design concept to a
+          production-ready application, all aimed to drive business success.
+        </p>
+        <p>
+          Welcome to my personal website where I share my knowledge, experience,
+          and the projects that I've worked on.
         </p>
         <p>
           <a href="#contact">
