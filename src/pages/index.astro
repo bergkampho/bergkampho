@@ -1,6 +1,7 @@
 ---
 import AboutSection from "@components/AboutSection.astro";
 import ContactSection from "@components/ContactSection.astro";
+import SkillSection from "@components/SkillSection.astro";
 import PortfolioSection from "@components/portfolio/PortfolioSection.astro";
 import PageLayout from "@layouts/PageLayout.astro";
 ---
@@ -8,93 +9,7 @@ import PageLayout from "@layouts/PageLayout.astro";
 <PageLayout title="Bergkamp Ho">
   <AboutSection />
 
-  <section id="skills" class="salmon">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-sm-4 col-md-4">
-          <h1 class="text-center wow flipInX">Front-end development</h1>
-          <div
-            class="front-end-icon icon-wrapper icon-3x text-center wow fadeIn"
-          >
-            <i class="icon-html5"></i>
-            <i class="icon-css3"></i>
-            <i class="icon-mobile-phone"></i>
-            <i class="icon-desktop"></i>
-          </div>
-          <div class="wow fadeIn">
-            <p>I'm fluent with HTML, CSS and JavaScript.</p>
-            <p>
-              I love mobile. I make website responsive to any type of device or
-              any screen size.
-            </p>
-            <p>
-              I can build HTML prototype based on raw images, implement effects
-              with pure CSS3 or jQuery for complex animation.
-            </p>
-            <p class="small">
-              P.S. Recently I've been learning mobile app development. I'm open
-              to join any start-up project for free to get experience.
-            </p>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-4">
-          <h1 class="text-center wow flipInX">Back-end development</h1>
-          <div
-            class="back-end-icon icon-wrapper icon-3x text-center wow fadeIn"
-          >
-            <i class="icon-github"></i>
-            <i class="icon-code"></i>
-            <i class="icon-sitemap"></i>
-            <i class="icon-shopping-cart" style="font-size: 0.9em;"></i>
-          </div>
-          <div class="wow fadeIn">
-            <p>
-              I'm a open source lover and experienced with Linux Apache MySQL
-              PHP environment.
-            </p>
-            <p>
-              I'm able to implement websites with custom business logic such as
-              Content Management System or shopping cart with payment gateway
-              integration.
-            </p>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-4">
-          <h1 class="text-center wow flipInX">3rd-party integration</h1>
-          <div
-            class="3rd-party-icon icon-wrapper icon-3x text-center wow fadeIn"
-          >
-            <i class="icon-facebook"></i>
-            <i class="icon-thumbs-up-alt"></i>
-            <i class="icon-twitter"></i>
-            <i class="icon-bar-chart"></i>
-          </div>
-          <div class="wow fadeIn">
-            <p>
-              I'm also familiar with integration of famous social platform like
-              Facebook, Twitter and WeChat. Making use of the social platform
-              plugins or APIs to increase visitor engagement.
-            </p>
-            <p>
-              As well, I can implement tracking to the website in order to
-              analyse visitor behaviors.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-12 text-center">
-          <p class="wow fadeIn">
-            <a href="#portfolio" class="call-for-action"
-              ><i class="icon-briefcase"></i> see my work</a
-            >
-          </p>
-        </div>
-      </div>
-    </div>
-    <!-- /.container -->
-  </section>
+  <SkillSection />
 
   <PortfolioSection />
 
