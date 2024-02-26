@@ -1,0 +1,21 @@
+---
+import GoogleTagManagerNoScript from "../components/GoogleTagManagerNoScript.astro";
+import Head from "../components/Head.astro";
+
+const { title } = Astro.props;
+---
+
+<html lang="en">
+  <Head title={title} />
+  <body>
+    <GoogleTagManagerNoScript />
+    <div class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">Bergkamp Ho</a>
+        </div>
+      </div>
+    </div>
+    <slot />
+  </body>
+</html>
