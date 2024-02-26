@@ -1,0 +1,62 @@
+<style>
+  section {
+    background-color: var(--color-ocean);
+    color: #fff;
+  }
+
+  a {
+    color: currentColor;
+    :hover {
+      color: var(--color-ocean);
+      background: #fff;
+    }
+
+    .link-text {
+      padding: 0 0.5rem;
+    }
+  }
+
+  [class^="icon-"] {
+    margin: 0;
+  }
+
+  h1:hover .icon-heart {
+    color: var(--color-salmon);
+    transition: 0.25s;
+  }
+
+  .why:before {
+    content: "Why me?";
+  }
+
+  #contact a:hover .why:before {
+    content: "Why not?";
+  }
+</style>
+<section id="contact">
+  <article class="container text-center">
+    <h1 class="wow flipInX">
+      <i class="icon-heart"></i> I'm Available for Full-time or Freelance Work
+    </h1>
+    <p class="wow flipInX">
+      Please send me email at
+      <a href="mailto:hello@bergkampho.com"
+        ><span class="link-text"
+          ><i class="icon-envelope"></i> hello@bergkampho.com</span
+        ></a
+      >. You can also view my
+      <a target="_blank" href="http://www.linkedin.com/in/bergkampho"
+        ><span class="link-text"
+          ><i class="icon-linkedin-sign"></i> LinkedIn</span
+        ></a
+      >
+      profile.
+    </p>
+
+    <p class="wow flipInY">
+      <a data-track-label="Why me" href="#skills">
+        <span class="link-text why"></span>
+      </a>
+    </p>
+  </article>
+</section>
