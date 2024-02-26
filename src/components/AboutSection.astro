@@ -1,3 +1,7 @@
+---
+import "../styles/animate.css";
+---
+
 <style>
   section {
     background-image: none;
@@ -26,7 +30,7 @@
   }
 
   .avatar {
-    -webkit-animation: move-right 0.8s ease-out 0.2s backwards;
+    animation: move-right 0.8s ease-out 0.2s backwards;
 
     @media (min-width: 768px) {
       text-align: right;
@@ -34,7 +38,12 @@
   }
 
   article {
-    -webkit-animation: move-left 0.8s ease-out 0.2s backwards;
+    animation: move-left 0.8s ease-out 0.2s backwards;
+  }
+
+  .waving-hand {
+    display: inline-block;
+    animation: wave 3s infinite;
   }
 
   h1 {
@@ -45,21 +54,9 @@
     margin-top: 2px;
   }
 
-  @keyframes wave {
-    0%,
-    25%,
-    75%,
-    100% {
-      transform: rotate(0deg);
-    }
-    50% {
-      transform: rotate(30deg);
-    }
-  }
-
-  .waving-hand {
-    display: inline-block;
-    animation: wave 3s infinite;
+  .anim-up-down {
+    position: relative;
+    animation: up-down 2s ease-in 1s 490;
   }
 </style>
 <section>

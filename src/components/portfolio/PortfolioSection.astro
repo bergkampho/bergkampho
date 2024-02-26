@@ -1,16 +1,16 @@
 ---
 import Project from "./Card.astro";
+import ImgFlipbook from "./img/flipbook.jpeg";
+import ImgGift from "./img/gift.jpg";
+import ImgHanbo from "./img/hanbo.jpg";
+import ImgIpc from "./img/ipcfoodlab.jpg";
 import ImgPampers from "./img/pampers-lf.jpg";
 import ImgVictionary from "./img/victionary.jpg";
-import ImgIpc from "./img/ipcfoodlab.jpg";
-import ImgFlipbook from "./img/flipbook.jpeg";
-import ImgHanbo from "./img/hanbo.jpg";
-import ImgGift from "./img/gift.jpg";
 ---
 
 <section id="portfolio" class="lemon">
   <div class="container-fluid text-center">
-    <h1 class="wow flipInX">Recent projects</h1>
+    <h1 data-aos="flip-up">Recent projects</h1>
 
     <div class="row">
       <Project
@@ -47,7 +47,7 @@ import ImgGift from "./img/gift.jpg";
 
     <div class="row">
       <div class="col-md-12">
-        <p class="wow fadeIn">
+        <p data-aos="fade-zooom-in">
           <a href="#contact" class="call-for-action">
             <i class="icon-thumbs-up"></i> Hire me
           </a>

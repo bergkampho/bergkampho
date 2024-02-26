@@ -11,7 +11,7 @@ const { tags, title, image } = Astro.props;
 ---
 
 <div class="col-xs-12 col-sm-6 col-md-4">
-  <div class="thumbnail wow fadeInUp">
+  <div class="thumbnail" data-aos="fade-up">
     <Image src={image} alt={title} />
     <div class="caption">
       <h4>{title}</h4>

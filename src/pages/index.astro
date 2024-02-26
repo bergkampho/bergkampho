@@ -4,8 +4,16 @@ import ContactSection from "@components/ContactSection.astro";
 import SkillSection from "@components/SkillSection.astro";
 import PortfolioSection from "@components/portfolio/PortfolioSection.astro";
 import PageLayout from "@layouts/PageLayout.astro";
+
+import "aos/dist/aos.css"; // Import AOS styles
 ---
 
+<script>
+  // Init AOS on page load and asto transistion
+  import { aosInit } from "../js/aos";
+  aosInit();
+  document.addEventListener("astro:after-swap", aosInit);
+</script>
 <PageLayout title="Bergkamp Ho">
   <AboutSection />
 
