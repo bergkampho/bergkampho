@@ -2,6 +2,7 @@
 import { ViewTransitions } from "astro:transitions";
 
 import GoogleTagManager from "../components/GoogleTagManager.astro";
+import ImgAvatar from "../img/avatar.jpg";
 import "../styles/global.css";
 
 const { title } = Astro.props;
@@ -19,7 +20,7 @@ const { title } = Astro.props;
     content="Bergkamp Ho, bho, fung, freelance, siufung, bergkampho, bergkamp, html production, javascript,job, web, shopping cart"
   />
   <meta name="author" content="Bergkamp Ho" />
-  <meta property="og:image" content="img/avatar.jpg" />
+  <meta property="og:image" content={ImgAvatar.src} />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="generator" content={Astro.generator} />
 

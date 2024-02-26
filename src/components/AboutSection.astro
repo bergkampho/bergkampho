@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+import ImgAvatar from "../img/avatar.jpg";
 import "../styles/animate.css";
 ---
 
@@ -23,9 +25,12 @@ import "../styles/animate.css";
   img {
     width: 50%;
     max-width: 240px;
+    height: auto;
 
     @media (min-width: 768px) {
-      width: 240px;
+      width: 300px;
+      max-width: 300px;
+      margin-right: 1rem;
     }
   }
 
@@ -63,7 +68,7 @@ import "../styles/animate.css";
   <div class="container">
     <div class="row row-flex">
       <div class="col-xs-12 col-sm-5 avatar">
-        <img class="img-circle" src="/img/avatar.jpg" alt="It's Fung." />
+        <Image src={ImgAvatar} class="img-circle" alt="It's Wayne." />
       </div>
       <article class="col-xs-12 col-sm-7">
         <h1>Hello! I'm Wayne. <span class="waving-hand">👋</span></h1>
