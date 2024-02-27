@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import ImgAvatar from "../img/avatar.jpg";
+import meta from "../js/meta.js";
 import "../styles/animate.css";
 ---
 
@@ -71,12 +72,9 @@ import "../styles/animate.css";
         <Image src={ImgAvatar} class="img-circle" alt="It's Wayne." />
       </div>
       <article class="col-xs-12 col-sm-7">
-        <h1>Hello! I'm Wayne. <span class="waving-hand">👋</span></h1>
-        <h2>Bergkamp Ho is my network ID.</h2>
-        <p>
-          I'm a Full Stack Web Developer with 14+ years of experience in
-          fintech, software engineering and marketing industry.
-        </p>
+        <h1>{meta.title} <span class="waving-hand">👋</span></h1>
+        <h2>{meta.subtitle}</h2>
+        <p>{meta.description}</p>
         <p>
           I've refined my skills in building beautiful and functional
           interfaces. This includes everything from the design concept to a
