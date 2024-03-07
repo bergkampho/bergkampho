@@ -10,13 +10,14 @@ interface Props {
 const { tags, title, image } = Astro.props;
 ---
 
-<div class="col-xs-12 col-sm-6 col-md-4">
-  <div class="thumbnail" data-aos="fade-up">
-    <Image src={image} alt={title} />
-    <div class="caption">
-      <h4>{title}</h4>
-      {tags.map((item) => <span class="tag">#{item}</span>)}
-    </div>
+<div
+  class="bg-gray-50 dark:bg-gray-700 p-2 shadow-xl dark:shadow-none"
+  data-aos="fade-up"
+>
+  <Image src={image} alt={title} />
+  <div class="text-gray-500 dark:text-gray-50 mt-3">
+    <h4 class="mt-2 mb-0">{title}</h4>
+    {tags.map((item) => <span class="text-xs mr-2">#{item}</span>)}
   </div>
 </div>
 

@@ -4,58 +4,29 @@ const thisYear = new Date().getFullYear();
 
 <style>
   footer {
-    background: #283641;
-    color: var(--body-color-light);
+    background: var(--color-gray-900);
+    color: var(--color-gray-400);
     padding: 1.5em 0 1em;
   }
 
   a {
-    color: var(--body-color-light);
+    color: var(--color-gray-400);
 
     :hover {
       color: var(--color-lemon);
     }
   }
-
-  .social a {
-    margin-right: 1rem;
-  }
 </style>
-<footer class="container-fuild text-center">
-  <p class="small">
+<footer class="text-center">
+  <p class="text-xs">
     <a
       data-track-label="Bho GitHub"
       target="_blank"
       href="https://github.com/bergkampho/bergkampho"
       aria-label="Under the hood"><i class="icon-cog icon-spin"></i></a
     >
-    Made in HK and revamped in the UK. &copy; 2013-{thisYear} Bergkamp Ho.
-  </p>
-
-  <p class="social small">
-    <a
-      data-track-label="Facebook"
-      aria-label="Facebook"
-      target="_blank"
-      href="https://www.facebook.com/bergkampho"
-    >
-      <i class="icon-facebook-sign icon-2x"></i>
-    </a>
-    <a
-      data-track-label="Instagram"
-      aria-label="Instagram"
-      target="_blank"
-      href="https://www.instagram.com/bergkampho"
-    >
-      <i class="icon-instagram icon-2x"></i>
-    </a>
-    <a
-      data-track-label="GitHub"
-      aria-label="GitHub"
-      target="_blank"
-      href="https://github.com/bergkampho"
-    >
-      <i class="icon-github icon-2x"></i>
-    </a>
+    Made in HK and revamped in the UK. <br class="lg:hidden" />&copy; 2013-{
+      thisYear
+    } Bergkamp Ho.
   </p>
 </footer>

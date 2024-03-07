@@ -32,11 +32,34 @@ const { title } = Astro.props;
   <title>{title}</title>
 
   <link
-    href="//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700"
+    href="//fonts.googleapis.com/css?family=Inter:400,700"
     rel="stylesheet"
     type="text/css"
   />
-  <link href="/css/bootstrap.min.css" rel="stylesheet" />
   <link href="/css/font-awesome.min.css" rel="stylesheet" />
+  <script is:inline>
+    // This code is inlined in the head to make dark mode instant & blocking.
+    const getThemePreference = () => {
+      return localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+        ? "dark"
+        : "light";
+    };
+    const isDark = getThemePreference() === "dark";
+    document.documentElement.classList[isDark ? "add" : "remove"]("dark");
+
+    if (typeof localStorage !== "undefined") {
+      // Watch the document element and persist user preference when it changes.
+      const observer = new MutationObserver(() => {
+        const isDark = document.documentElement.classList.contains("dark");
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+      });
+      observer.observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ["class"],
+      });
+    }
+  </script>
   <ViewTransitions />
 </head>

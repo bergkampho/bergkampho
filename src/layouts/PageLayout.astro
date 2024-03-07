@@ -2,17 +2,57 @@
 import Footer from "../components/Footer.astro";
 import GoogleTagManagerNoScript from "../components/GoogleTagManagerNoScript.astro";
 import Head from "../components/Head.astro";
-import Navbar from "../components/Navbar.astro";
+import TopBar from "../components/TopBar.astro";
 ---
 
 <html lang="en">
   <Head title={Astro.props.title} />
-  <body id="about">
+  <body>
     <GoogleTagManagerNoScript />
-    <Navbar />
+    <TopBar />
 
     <slot />
 
     <Footer />
+    <script>
+      function init() {
+        window.addEventListener("scroll", handleScroll);
+      }
+
+      function handleScroll() {
+        // Handle sticky navbar
+        const scrollUpBtn = document.querySelector<HTMLElement>(".scroll-up");
+        const navBar = document.querySelector<HTMLElement>(".navbar");
+        if (scrollUpBtn && navBar) {
+          if (window.scrollY > 100) {
+            scrollUpBtn.style.display = "block";
+            navBar.dataset.ui = "sticky";
+          } else {
+            scrollUpBtn.style.display = "none";
+            delete navBar.dataset.ui;
+          }
+        }
+
+        // Handle active navbar item
+        const sections = document.querySelectorAll("section");
+        const scrollLinks = document.querySelectorAll<HTMLElement>("nav a");
+        const scrollPosition = window.scrollY;
+        sections.forEach((section, index) => {
+          const sectionTop = section.offsetTop - 80; // Adjusted for better visibility
+          const sectionBottom = sectionTop + section.offsetHeight;
+
+          if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+            // Highlight the corresponding navigation link
+            scrollLinks.forEach((link) => {
+              delete link.dataset!.ui;
+            });
+            scrollLinks[index].dataset.ui = "active";
+          }
+        });
+      }
+
+      init();
+      window.addEventListener("astro:beforeload", init);
+    </script>
   </body>
 </html>

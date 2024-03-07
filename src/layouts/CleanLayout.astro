@@ -9,12 +9,8 @@ const { title } = Astro.props;
   <Head title={title} />
   <body>
     <GoogleTagManagerNoScript />
-    <div class="navbar navbar-default">
-      <div class="container">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="/">Bergkamp Ho</a>
-        </div>
-      </div>
+    <div class="container py-1 text-sm text-skin-nav-link">
+      <a class="navbar-brand" href="/">Bergkamp Ho</a>
     </div>
     <slot />
   </body>
