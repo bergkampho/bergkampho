@@ -27,6 +27,9 @@ export default {
       secondary: "var(--secondary-color)",
     },
     extend: {
+      fontSize: {
+        "6xl": "3.5rem",
+      },
       textColor: {
         skin: {
           base: "var(--body-base-color)",
