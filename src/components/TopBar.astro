@@ -1,36 +1,12 @@
 ---
+import Avatar from "./Avatar.astro";
 import ThemeToggle from "./ThemeToggle.astro";
 ---
 
-<style>
-  .navbar {
-    transition: background-color 0.6s ease;
-  }
-</style>
-<header
-  class="fixed top-0 inset-x-0 z-10 data-[ui=sticky]:bg-skin-fill data-[ui=sticky]:opacity-85 navbar"
->
-  <div class="container mx-auto py-1 text-sm text-skin-nav-link">
+<header class="" data-aos="fade-down" data-aos-delay="800">
+  <div class="container mx-auto my-4 text-sm text-skin-nav-link">
     <div class="flex justify-between items-center">
-      <a class="hover:text-skin-nav-link-hover" href="/">Bergkamp Ho</a>
-      <nav class="hidden sm:flex space-x-4 text-xs">
-        <a
-          class="hover:text-skin-nav-link-hover data-[ui=active]:text-skin-nav-link-hover"
-          href="#about">About</a
-        >
-        <a
-          class="hover:text-[--color-salmon] data-[ui=active]:text-[--color-salmon]"
-          href="#skills">Skills</a
-        >
-        <a
-          class="hover:text-[--color-lemon] data-[ui=active]:text-[--color-lemon]"
-          href="#portfolio">Portfolio</a
-        >
-        <a
-          class="hover:text-[--color-ocean] data-[ui=active]:text-[--color-ocean]"
-          href="#contact">Contact</a
-        >
-      </nav>
+      <a class="hover:text-skin-nav-link-hover" href="/"><Avatar /></a>
       <div class="flex items-center text-base space-x-2">
         <a
           data-track-label="GitHub"

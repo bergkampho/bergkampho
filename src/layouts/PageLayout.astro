@@ -14,6 +14,11 @@ import TopBar from "../components/TopBar.astro";
     <slot />
 
     <Footer />
+    <div class="scroll-up">
+      <a href="#hello" title="Go to top" data-track-label="Go to top">
+        <i class="icon-chevron-up"></i>
+      </a>
+    </div>
     <script>
       function init() {
         window.addEventListener("scroll", handleScroll);
@@ -22,33 +27,13 @@ import TopBar from "../components/TopBar.astro";
       function handleScroll() {
         // Handle sticky navbar
         const scrollUpBtn = document.querySelector<HTMLElement>(".scroll-up");
-        const navBar = document.querySelector<HTMLElement>(".navbar");
-        if (scrollUpBtn && navBar) {
+        if (scrollUpBtn) {
           if (window.scrollY > 100) {
             scrollUpBtn.style.display = "block";
-            navBar.dataset.ui = "sticky";
           } else {
             scrollUpBtn.style.display = "none";
-            delete navBar.dataset.ui;
           }
         }
-
-        // Handle active navbar item
-        const sections = document.querySelectorAll("section");
-        const scrollLinks = document.querySelectorAll<HTMLElement>("nav a");
-        const scrollPosition = window.scrollY;
-        sections.forEach((section, index) => {
-          const sectionTop = section.offsetTop - 80; // Adjusted for better visibility
-          const sectionBottom = sectionTop + section.offsetHeight;
-
-          if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-            // Highlight the corresponding navigation link
-            scrollLinks.forEach((link) => {
-              delete link.dataset!.ui;
-            });
-            scrollLinks[index].dataset.ui = "active";
-          }
-        });
       }
 
       init();
