@@ -1,7 +1,6 @@
 ---
-import AboutSection from "@components/AboutSection.astro";
+import Hello from "@components/Hello.astro";
 import ContactSection from "@components/ContactSection.astro";
-import SkillSection from "@components/SkillSection.astro";
 import PortfolioSection from "@components/portfolio/PortfolioSection.astro";
 import PageLayout from "@layouts/PageLayout.astro";
 
@@ -16,11 +15,7 @@ import "aos/dist/aos.css"; // Import AOS styles
   document.addEventListener("astro:after-swap", aosInit);
 </script>
 <PageLayout title="Bergkamp Ho">
-  <AboutSection />
-
-  <SkillSection />
-
+  <Hello />
   <PortfolioSection />
-
   <ContactSection />
 </PageLayout>

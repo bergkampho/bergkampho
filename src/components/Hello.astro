@@ -1,0 +1,77 @@
+---
+import { Image } from "astro:assets";
+import ImgMeDay from "../img/photo-me-day.jpg";
+import ImgMeNight from "../img/photo-me-night.jpg";
+---
+
+<section id="hello">
+  <div class="container lg:w-[90%] pt-5 pb-10">
+    <h1
+      class="text-primary text-6xl leading-none uppercase m-0"
+      data-aos="fade-right"
+      data-aos-offset="0"
+    >
+      Hello,
+    </h1>
+    <h1
+      class="text-primary text-6xl leading-none uppercase"
+      data-aos="fade-left"
+      data-aos-delay="300"
+      data-aos-offset="0"
+    >
+      I'm Wayne
+    </h1>
+    <article class="ml-4 sm:ml-[30%]">
+      <p
+        class="content font-semibold text-xl"
+        data-aos="fade-up"
+        data-aos-delay="600"
+        data-aos-offset="0"
+      >
+        — a web developer passionate about crafting code that address real-life
+        challenges.
+      </p>
+    </article>
+  </div>
+</section>
+
+<Image
+  src={ImgMeDay}
+  alt="Bergkamp Ho"
+  class="dark:hidden m-auto w-full lg:w-[95%] lg:rounded-xl"
+  data-aos="fade-up"
+  data-aos-delay="900"
+/>
+
+<Image
+  src={ImgMeNight}
+  alt="Bergkamp Ho"
+  class="hidden dark:block m-auto w-full lg:w-[95%] lg:rounded-xl"
+  data-aos="fade-up"
+  data-aos-delay="900"
+/>
+
+<section class="grid">
+  <div class="container lg:w-[90%] pt-10 pb-10">
+    <h2
+      class="text-5xl text-secondary sm:ml-[30%] uppercase"
+      data-aos="fade-in"
+    >
+      Passion has its own rewards
+    </h2>
+    <article class="ml-4 sm:ml-[30%]">
+      <p data-aos="fade-in">
+        Leveraging over 10 years of experience in fintech, software engineering,
+        and marketing, I've refined my skills in transforming innovative ideas
+        into software solutions.
+      </p>
+      <p data-aos="fade-in" class="text-primary text-lg font-semibold my-5">
+        Not only working software, but also well-crafted software.
+      </p>
+      <p data-aos="fade-in">
+        I go beyond functionality to create well-architected, maintainable
+        applications that ensure long-term business success.
+      </p>
+    </article>
+  </div>
+</section>
