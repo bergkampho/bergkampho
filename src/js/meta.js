@@ -2,7 +2,7 @@ const meta = {
   title: "Hello! I'm Wayne.",
   subtitle: "Bergkamp Ho is my network ID.",
   description:
-    "I'm a Full Stack Web Developer with 14+ years of experience in fintech, software engineering and marketing industry.",
+    "I'm a web developer passionate about crafting code that address real-life challenges.",
 };
 
 export default meta;
