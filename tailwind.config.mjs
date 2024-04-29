@@ -23,6 +23,8 @@ export default {
       ocean: "var(--color-ocean)",
       lemon: "var(--color-lemon)",
       gray: colors.gray,
+      primary: "var(--primary-color)",
+      secondary: "var(--secondary-color)",
     },
     extend: {
       textColor: {
