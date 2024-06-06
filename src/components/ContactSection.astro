@@ -28,29 +28,38 @@ import ImgMemoji from "../img/memoji.png";
     );
   }
 </style>
-<section
-  id="contact"
-  class="theme-contrast m-auto mb-20 py-20 pb-0 w-[90%] lg:w-[80%] rounded-3xl grid place-items-center bg-gradient text-skin-base"
-  data-aos="fade-in"
->
-  <div class="container text-left 2xl:text-center">
-    <h2 class="text-4xl leading-none text-skin-pop">
-      <span class="block 2xl:inline anim-up-down">🤝</span>
-      Interested in working together?
-    </h2>
-
-    <p>
-      Please send me email at
-      <a href="mailto:hello@bergkampho.com" class="whitespace-nowrap sm:px-1"
-        ><i class="m-0 icon-envelope"></i> hello@bergkampho.com</a
-      >. You can also connect my <a
-        target="_blank"
-        href="http://www.linkedin.com/in/bergkampho"
-        class="whitespace-nowrap sm:px-1"
-      >
-        <i class="icon-linkedin-sign"></i> LinkedIn</a
-      > profile.
-    </p>
+<section id="contact" class="theme-contrast" data-aos="fade-in">
+  <div
+    class="container max-w-[95%] mb-20 px-8 pt-8 lg:pt-20 pb-0 bg-gradient text-skin-base rounded-3xl grid place-items-center"
+  >
+    <article class="text-left lg:text-center">
+      <h2 class="text-4xl leading-none text-skin-pop">
+        <span class="block lg:inline anim-up-down">🤝</span>
+        Interested in working together?
+      </h2>
+      <p class="leading-relaxed">
+        <!-- Calendly link widget begin -->
+        <link
+          href="https://assets.calendly.com/assets/external/widget.css"
+          rel="stylesheet"
+        />
+        <script
+          src="https://assets.calendly.com/assets/external/widget.js"
+          type="text/javascript"
+          async></script>
+        <a
+          class="whitespace-nowrap px-1"
+          href=""
+          onclick="Calendly.initPopupWidget({url: 'https://calendly.com/bergkampho/collaboration-with-wayne'});return false;"
+          ><i class="m-0 icon-calendar"></i> Schedule a Meeting with me</a
+        >
+        <!-- Calendly link widget end -->or email your ideas at
+        <a href="mailto:hello@bergkampho.com" class="whitespace-nowrap px-1"
+          ><i class="m-0 icon-envelope"></i> hello@bergkampho.com</a
+        >
+      </p>
+      <p class="leading-relaxed mt-2 px-1">I'd love to hear from you!</p>
+    </article>
+    <Image src={ImgMemoji} alt="Bergkamp Ho" class="w-[220px] pt-5" />
   </div>
-  <Image src={ImgMemoji} alt="Bergkamp Ho" class="w-[220px] pt-5" />
 </section>
