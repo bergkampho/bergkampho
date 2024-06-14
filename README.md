@@ -1,13 +1,13 @@
 # Bergkamp Ho's Personal Website
 
-It is a repository aimed at showcasing a my skills from development to deployment. It leverages various technologies such as Astro, CSS, HTML, Docker, and GitHub Actions to demonstrate proficiency in modern web development practices.
+It is a repository aimed at showcasing a my skills from development to deployment. It leverages various technologies such as Astro, Tailwind CSS, Docker, and GitHub Actions to demonstrate proficiency in modern web development practices.
 
 ## Under the Hood
 
-- Astro: Utilizes Astro, a modern static site generator that allows for seamless integration of JavaScript frameworks like React.
-- CSS and HTML: Implements styling and structuring of web pages using CSS and HTML to create visually appealing and user-friendly interfaces.
-- Docker: Utilizes Docker for containerization, ensuring consistency across different environments and simplifying deployment.
-- GitHub Actions: Integrates GitHub Actions to automate the build and deployment process, streamlining the development workflow.
+- Astro: A modern static site generator used for building the site structure, creating reusable layouts, and organizing content collections efficiently.
+- Tailwind CSS: A utility-first CSS framework that facilitates theming, ensures responsiveness, and minimizes unused styles for a streamlined design process.
+- Docker: Utilized for containerization, simplifying the deployment process by ensuring consistency across different environments.
+- GitHub Actions: Implemented to automate the build and deployment workflow, enhancing efficiency and reducing manual intervention.
 
 ## Project Structure
 
@@ -18,6 +18,7 @@ Inside of your Astro project, you'll see the following folders and files:
 ├── public/
 ├── src/
 │   └── components/
+│   └── layouts/
 │   └── pages/
 │       └── index.astro
 └── package.json
@@ -38,6 +39,7 @@ I'm a Full Stack Web Developer with 14+ years of experience in fintech, software
 ### Skills
 
 #### Design
+
 ![image](https://github.com/bergkampho/bergkampho/assets/911700/24735f2a-4805-447e-b51d-074c77ac6b91 "Material Design")
 ![image](https://github.com/bergkampho/bergkampho/assets/911700/e8277564-d60c-4617-955f-b6fb18447455 "Storybook")
 ![image](https://github.com/bergkampho/bergkampho/assets/911700/6ccb41d6-e199-434b-aac7-54bb3b4335c1)
@@ -45,8 +47,8 @@ I'm a Full Stack Web Developer with 14+ years of experience in fintech, software
 ![image](https://github.com/bergkampho/bergkampho/assets/911700/e34d273c-3eef-49a5-b544-3dd09f4d05c5)
 ![image](https://github.com/bergkampho/bergkampho/assets/911700/a0f68b62-ed20-4837-b377-c11bcbb212a4)
 
-
 #### Front-end
+
 ![image](https://github.com/bergkampho/bergkampho/assets/911700/61579197-698c-4b65-8bce-f234ba1e8010 "HTML")
 ![image](https://github.com/bergkampho/bergkampho/assets/911700/602853f5-c9bb-4615-8d8c-89c0028a5876 "JavaScript")
 ![image](https://github.com/bergkampho/bergkampho/assets/911700/096b140a-bd63-46c8-9d89-2b817b7b2c1e "TypeScript")
@@ -64,6 +66,7 @@ I'm a Full Stack Web Developer with 14+ years of experience in fintech, software
 ![image](https://github.com/bergkampho/bergkampho/assets/911700/26d7e0a3-5453-4e12-8879-868f36d156d9 "Astro")
 
 #### Backend
+
 ![image](https://github.com/bergkampho/bergkampho/assets/911700/64ff201b-bb72-47a4-b93c-7bc8c43a567b "Node.js")
 ![image](https://github.com/bergkampho/bergkampho/assets/911700/aea3a263-ede3-4e5a-9c1d-9ab8fd4e76e7 "MongoDB")
 ![image](https://github.com/bergkampho/bergkampho/assets/911700/106eb742-b206-4b54-9857-0975f57e3ccc "Strapi")
@@ -76,12 +79,14 @@ I'm a Full Stack Web Developer with 14+ years of experience in fintech, software
 ![image](https://github.com/bergkampho/bergkampho/assets/911700/72edaa41-33eb-4246-b202-411fa1afc392)
 
 #### Testing
+
 ![image](https://github.com/bergkampho/bergkampho/assets/911700/6b495160-a3fd-427c-9605-aeb038c401e4)
 ![image](https://github.com/bergkampho/bergkampho/assets/911700/3b057274-4edf-42ac-a6f7-85af2f014723)
 ![image](https://github.com/bergkampho/bergkampho/assets/911700/a91d0f26-a181-4d8f-8090-663f99b283cf "Cypress")
 ![image](https://github.com/bergkampho/bergkampho/assets/911700/04ba5306-401e-4350-8fd7-302920ee44c6 "Selenium")
 
 #### DevOps
+
 ![image](https://github.com/bergkampho/bergkampho/assets/911700/9dc0e5d2-971c-4e47-9781-956911df60bc)
 ![image](https://github.com/bergkampho/bergkampho/assets/911700/345aa075-4fd6-4fef-a732-3baa000ca52a)
 ![image](https://github.com/bergkampho/bergkampho/assets/911700/7b74f951-9d5f-46aa-92a8-300403dd8211)
@@ -92,6 +97,7 @@ I'm a Full Stack Web Developer with 14+ years of experience in fintech, software
 ![image](https://github.com/bergkampho/bergkampho/assets/911700/d5fca913-ba1b-4e10-9921-122b2caac35c)
 
 #### Analysis & Monitoring
+
 ![image](https://github.com/bergkampho/bergkampho/assets/911700/6fab59b3-5fb1-43f9-b52a-23398636bbcb "GA")
 ![image](https://github.com/bergkampho/bergkampho/assets/911700/e91aca28-39ab-457d-86b8-7d0cd2b5fada "JIRA")
 ![image](https://github.com/bergkampho/bergkampho/assets/911700/c738afcd-f93a-4e1d-a8d0-3bbef9d58bc5 "Sentry")
@@ -100,7 +106,3 @@ I'm a Full Stack Web Developer with 14+ years of experience in fintech, software
 ### Get in Touch
 
 [LinkedIn](https://www.linkedin.com/in/bergkampho/)
-
-
-
-
