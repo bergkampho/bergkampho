@@ -5,6 +5,26 @@ import Head from "../components/Head.astro";
 import TopBar from "../components/TopBar.astro";
 ---
 
+<style>
+  .scroll-up {
+    position: fixed;
+    display: none;
+    z-index: 999;
+    bottom: 1rem;
+    right: 1rem;
+  }
+  .scroll-up a {
+    background-color: rgba(237, 237, 237, 0.5);
+    border-radius: 10px;
+    display: block;
+    width: 28px;
+    height: 28px;
+    text-align: center;
+    color: #222;
+    font-size: 0.75rem;
+    line-height: 30px;
+  }
+</style>
 <html lang="en">
   <Head title={Astro.props.title} />
   <body>
