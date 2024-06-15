@@ -13,22 +13,24 @@ It is a repository aimed at showcasing a my skills from development to deploymen
 
 Inside of your Astro project, you'll see the following folders and files:
 
-```text
+```js
 /
+├── .github/workflows/ // Define CICD pipeline
 ├── public/
 ├── src/
 │   └── components/
-│   └── layouts/
-│   └── pages/
+│   └── content/ // Store collections
+│       └── project/
+│           └── project-1.md
+│           └── ...
+│       └── config.ts // Define collections
+│   └── layouts/ // Store page template layouts
+│   └── pages/ // Expose as a route based on its file name.
+│       └── projects/
+│           └── [...slug].astro // Define collection layout
 │       └── index.astro
 └── package.json
 ```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
 
 ## About Me
 
