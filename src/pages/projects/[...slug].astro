@@ -1,0 +1,30 @@
+---
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+import PageLayout from "../../layouts/PageLayout.astro";
+
+export async function getStaticPaths() {
+  const entries = await getCollection("project");
+  return entries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<PageLayout frontmatter={entry.data}>
+  <div class="container">
+    <h1>{entry.data.title}</h1>
+    <Image
+      src={entry.data.image}
+      width="960"
+      height="640"
+      alt={entry.data.title}
+      transition:name={entry.slug}
+    />
+    <Content />
+  </div>
+</PageLayout>

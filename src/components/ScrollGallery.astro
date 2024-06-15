@@ -1,0 +1,89 @@
+---
+import { getCollection } from "astro:content";
+
+import Project from "./Card.astro";
+
+const projectEntries = await getCollection("project");
+---
+
+<style>
+  .scroll-container {
+    --viewport-content: 100%;
+    --item-width: 320px;
+    --pd-container-side: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .scroll-container {
+      --viewport-content: calc(768px - 2.5rem);
+      --item-width: 640px;
+      --pd-container-side: calc(50% - var(--viewport-content) / 2);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .scroll-container {
+      --viewport-content: calc(1024px - 4rem);
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .scroll-container {
+      --viewport-content: calc(1280px - 6rem);
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .scroll-container {
+      --viewport-content: calc(1536px - 8rem);
+    }
+  }
+
+  .scroll-container {
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-padding: var(--pd-container-side);
+    -ms-overflow-style: none; /* Hide scrollbar on IE and Edge */
+    scrollbar-width: none;
+  }
+
+  .scroll-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar on WebKit browsers */
+  }
+
+  .card-container {
+    margin: auto 0;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 30px;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding-inline-start: var(--pd-container-side);
+    padding-inline-end: calc(
+      100% - var(--pd-container-side) - var(--item-width)
+    );
+  }
+  .card {
+    width: var(--item-width);
+    scroll-snap-align: start; /* Align cards on scroll */
+  }
+</style>
+<div class="scroll-container sm:py-5" data-aos="fade-in">
+  <div class="card-container">
+    {
+      projectEntries
+        .sort((a, b) => b.data.index - a.data.index)
+        .map((entry) => (
+          <div class="card">
+            <Project
+              image={entry.data.image}
+              title={entry.data.title}
+              tags={entry.data.tags}
+              slug={entry.slug}
+            />
+          </div>
+        ))
+    }
+  </div>
+</div>
