@@ -33,12 +33,6 @@ const projectEntries = await getCollection("project");
     }
   }
 
-  @media (min-width: 1536px) {
-    .scroll-container {
-      --viewport-content: calc(1536px - 8rem);
-    }
-  }
-
   .scroll-container {
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
