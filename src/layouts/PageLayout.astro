@@ -34,30 +34,26 @@ import TopBar from "../components/TopBar.astro";
     <slot />
 
     <Footer />
-    <div class="scroll-up">
-      <a href="#hello" title="Go to top" data-track-label="Go to top">
-        <i class="icon-chevron-up"></i>
-      </a>
-    </div>
-    <script>
-      function init() {
-        window.addEventListener("scroll", handleScroll);
-      }
-
-      function handleScroll() {
-        // Handle sticky navbar
-        const scrollUpBtn = document.querySelector<HTMLElement>(".scroll-up");
-        if (scrollUpBtn) {
-          if (window.scrollY > 100) {
-            scrollUpBtn.style.display = "block";
-          } else {
-            scrollUpBtn.style.display = "none";
-          }
-        }
-      }
-
-      init();
-      window.addEventListener("astro:beforeload", init);
+    <!-- Calendly badge widget begin -->
+    <link
+      href="https://assets.calendly.com/assets/external/widget.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://assets.calendly.com/assets/external/widget.js"
+      type="text/javascript"
+      async></script>
+    <script type="text/javascript">
+      window.onload = function () {
+        Calendly.initBadgeWidget({
+          url: "https://calendly.com/bergkampho/collaboration-with-wayne",
+          text: "Meet with Me",
+          color: "#475569",
+          textColor: "#ffffff",
+          branding: undefined,
+        });
+      };
     </script>
+    <!-- Calendly badge widget end -->
   </body>
 </html>
