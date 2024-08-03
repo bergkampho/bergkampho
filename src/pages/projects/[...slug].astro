@@ -1,4 +1,5 @@
 ---
+import ContactSection from "@components/ContactSection.astro";
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 import PageLayout from "../../layouts/PageLayout.astro";
@@ -15,16 +16,30 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 
+<style>
+  .prose {
+    --tw-prose-body: var(--body-base-color);
+    --tw-prose-headings: var(--body-pop-color);
+    --tw-prose-quotes: var(--body-pop-color);
+    --tw-prose-quote-borders: var(--body-pop-color);
+    --tw-prose-bold: var(--body-pop-color);
+    --tw-prose-links: var(--primary-color);
+  }
+</style>
 <PageLayout frontmatter={entry.data}>
   <div class="container">
-    <h1>{entry.data.title}</h1>
-    <Image
-      src={entry.data.image}
-      width="960"
-      height="640"
-      alt={entry.data.title}
-      transition:name={entry.slug}
-    />
-    <Content />
+    <article class="prose mb-20">
+      <h1>{entry.data.title}</h1>
+      <Image
+        src={entry.data.image}
+        width="960"
+        height="640"
+        alt={entry.data.title}
+        transition:name={entry.slug}
+        class="mb-4 rounded-xl"
+      />
+      <Content />
+    </article>
   </div>
+  <ContactSection />
 </PageLayout>
