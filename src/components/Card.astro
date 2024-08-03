@@ -12,7 +12,7 @@ const { tags, title, image, slug } = Astro.props;
 ---
 
 <div
-  class="relative bg-white rounded-2xl overflow-hidden h-[540px] lg:hover:scale-[1.02] transform-gpu transition"
+  class="relative bg-white rounded-2xl overflow-hidden h-[520px] lg:hover:scale-[1.02] transform-gpu transition"
 >
   <div class="absolute text-right right-0 bottom-0 z-20 px-2 text-gray-50">
     {tags.map((item) => <span class="text-xs ml-2">#{item}</span>)}
@@ -22,10 +22,12 @@ const { tags, title, image, slug } = Astro.props;
     class="absolute inset-x-0 bottom-0 h-14 sm:h-1/6 z-10 bg-gradient-to-t from-gray-800 from-1%"
   >
   </div>
-  <Image
-    src={image}
-    alt={title}
-    class="absolute inset-0 h-full object-cover object-left z-0"
-    transition:name={slug}
-  />
+  <a href={`/projects/${slug}`} class="static">
+    <Image
+      src={image}
+      alt={title}
+      class="absolute inset-0 h-full object-cover object-left z-0"
+      transition:name={slug}
+    />
+  </a>
 </div>
