@@ -26,7 +26,10 @@ const { Content } = await entry.render();
     --tw-prose-links: var(--primary-color);
   }
 </style>
-<PageLayout frontmatter={entry.data}>
+<PageLayout
+  frontmatter={entry.data}
+  title={`${entry.data.title} - Bergkamp Ho`}
+>
   <div class="container">
     <article class="prose mb-20">
       <h1>{entry.data.title}</h1>
