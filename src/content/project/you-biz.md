@@ -2,14 +2,14 @@
 index: 4
 title: YouBiz
 tags: ["react", "antdesign"]
-image: "./img/youbiz.png"
+image: "./img/youbiz.jpg"
 ---
 
 ## Overview
 
-- Project: Web Application for [YouBiz](https://www.you.co/biz/)
+- Project: [YouBiz](https://www.you.co/biz/) (Cross-border payment application)
 - Company: [YouTrip](https://www.you.co/)
-- Technologies Used: [React](https://react.dev/), Redux, [Ant Design](https://ant.design//), Jest, ​​PostgreSQL, Kubernetes, [Vite](https://vitejs.dev/), GitHub Actions
+- Technologies Used: [React](https://react.dev/), Redux, [Ant Design](https://ant.design/), Jest, ​​PostgreSQL, [Vite](https://vitejs.dev/), Kubernetes, Docker, GitHub Actions
 
 ## Challenge
 
@@ -19,7 +19,7 @@ During the pandemic, I was tasked with forming a new team of three individuals t
 
 As the sole front-end developer in the team, I undertook the responsibility of laying the groundwork for a web application. This involved not only implementing the user interface but also collaborating closely with the designer to transform initial layout designs into functional pages. To streamline the process, I broke down the layouts into distinct UI components, grouping similar UX patterns to establish a comprehensive design library.
 
-Working with the designer, I implemented the UI using React and applied styling through styled-components, incorporating theming support for added flexibility. This strategic approach allowed for the creation of a reusable UI, facilitating the efficient application of UX patterns from the library to various features and significantly accelerating the development timeline.
+Furthermore, I implemented the UI using React and applied styling through styled-components, incorporating theming support for added flexibility. This strategic approach allowed for the creation of a reusable UI, facilitating the efficient application of UX patterns from the library to various features and significantly accelerating the development timeline.
 
 ## Result
 
