@@ -22,7 +22,12 @@ const { tags, title, image, slug } = Astro.props;
     class="absolute inset-x-0 bottom-0 h-14 sm:h-1/6 z-10 bg-gradient-to-t from-gray-800 from-1%"
   >
   </div>
-  <a href={`/projects/${slug}`} class="static">
+  <a
+    href={`/projects/${slug}`}
+    class="static"
+    data-track-label={title}
+    aria-label={title}
+  >
     <Image
       src={image}
       alt={title}
