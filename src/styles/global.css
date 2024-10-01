@@ -44,7 +44,7 @@
   --bg-fill-color: var(--color-gray-900);
   --body-base-color: var(--color-gray-400);
   --body-pop-color: var(--color-gray-300);
-  --nav-link-color: var(--color-gray-700);
+  --nav-link-color: var(--color-gray-400);
 }
 
 .theme-contrast {
