@@ -13,14 +13,14 @@ image: "./img/youbiz.jpg"
 
 ## Challenge
 
-During the pandemic, I was tasked with forming a new team of three individuals to rapidly develop a new product that would address the evolving requirements of our business clients.
+During the pandemic, I was asked to form a new team of 3 people to build a new product to meet the changing needs of our business.
 
 ## Solution
 
-As the sole front-end developer in the team, I undertook the responsibility of laying the groundwork for a web application. This involved not only implementing the user interface but also collaborating closely with the designer to transform initial layout designs into functional pages. To streamline the process, I broke down the layouts into distinct UI components, grouping similar UX patterns to establish a comprehensive design library.
+As the only front-end engineer on the team, I had to set up the foundation of a web app. This meant not only implementing the UI but also collaborating with the designer to turn the design into functional pages. I broke the layouts into individual UI components and grouped similar UX patterns into a design library.
 
-Furthermore, I implemented the UI using React and applied styling through styled-components, incorporating theming support for added flexibility. This strategic approach allowed for the creation of a reusable UI, facilitating the efficient application of UX patterns from the library to various features and significantly accelerating the development timeline.
+I also used React Storybook to implement the UI and styled-components with theming for extra flexibility. This allowed us to create reusable UIs and apply UX patterns from the library to different features to speed up development.
 
 ## Result
 
-The outcome of this collaborative effort was the successful launch of the beta version of the product. This not only met the immediate business needs but also positioned the company to secure additional funding from investors, ensuring the sustainability and growth of YouTrip during challenging times.
+The outcome was the successful launch of the beta product. This met the immediate business needs and also helped the company to raise more funds from investors and keep growing during the tough times.
