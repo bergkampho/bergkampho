@@ -14,14 +14,15 @@
 
   --color-salmon: #f34848;
   --color-lemon: rgb(230 255 104);
-  --color-ocean: rgb(2 125 199);
-  --color-sky: rgb(0 186 242);
+  --color-ocean: hsl(206, 100%, 34%);
+  --color-sky: hsl(196, 100%, 43%);
   --color-lime: #7dffaf;
 
   /* Theme */
   --primary-color: var(--color-ocean);
   --secondary-color: var(--color-sky);
   --bg-fill-color: var(--color-gray-200);
+  --bg-pop-color: var(--color-gray-100);
   --body-base-color: var(--color-gray-700);
   --body-pop-color: var(--color-gray-900);
   --nav-link-color: var(--color-gray-500);
@@ -42,6 +43,7 @@
   --primary-color: var(--color-lime);
   --secondary-color: var(--color-lemon);
   --bg-fill-color: var(--color-gray-900);
+  --bg-pop-color: var(--color-gray-950);
   --body-base-color: var(--color-gray-400);
   --body-pop-color: var(--color-gray-300);
   --nav-link-color: var(--color-gray-400);

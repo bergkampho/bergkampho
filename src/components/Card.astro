@@ -4,35 +4,45 @@ import { Image } from "astro:assets";
 interface Props {
   image: ImageMetadata;
   title: string;
+  description?: string;
   tags: string[];
   slug?: string;
 }
 
-const { tags, title, image, slug } = Astro.props;
+const { title, description, image, slug } = Astro.props;
 ---
 
 <div
-  class="relative bg-white rounded-2xl overflow-hidden h-[520px] lg:hover:scale-[1.02] transform-gpu transition"
+  class={`bg-skin-pop card-${slug} relative rounded-2xl lg:hover:shadow-md overflow-hidden h-[580px] md:hover:scale-[1.02] transform-gpu transition`}
 >
-  <div class="absolute text-right right-0 bottom-0 z-20 px-2 text-gray-50">
-    {tags.map((item) => <span class="text-xs ml-2">#{item}</span>)}
-    <h2 class="font-bold mb-2 uppercase">{title}</h2>
-  </div>
-  <div
-    class="absolute inset-x-0 bottom-0 h-14 sm:h-1/6 z-10 bg-gradient-to-t from-gray-800 from-1%"
-  >
-  </div>
   <a
-    href={`/projects/${slug}`}
+    href={`/projects/${slug}/`}
     class="static"
     data-track-label={title}
     aria-label={title}
   >
-    <Image
-      src={image}
-      alt={title}
-      class="absolute inset-0 h-full object-cover object-left z-0"
-      transition:name={slug}
-    />
+    <div class="p-4">
+      <h2 class="text-xs text-skin-pop mb-2">{title}</h2>
+      {
+        description && (
+          <p class="text-sm text-skin-base font-normal">{description}</p>
+        )
+      }
+    </div>
+
+    <div class="absolute bottom-0 z-1">
+      <Image
+        src={image}
+        alt={title}
+        class="ml-4 rounded-t-md h-[420px] object-cover object-left"
+        transition:name={slug}
+      />
+    </div>
+
+    <div
+      class="absolute bottom-2 right-2 text-gray-50 bg-gray-600 opacity-80 rounded-full w-6 h-6 flex items-center justify-center"
+    >
+      <i class="icon-chevron-right"></i>
+    </div>
   </a>
 </div>

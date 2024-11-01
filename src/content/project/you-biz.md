@@ -1,7 +1,8 @@
 ---
 index: 4
-title: YouBiz
-tags: ["react", "antdesign"]
+title: YouBiz Payment Platform
+description: Built from the ground up, resulting in 1,000+ business sign-ups, and expanding B2B capabilities.
+tags: ["react", "design-system"]
 image: "./img/youbiz.jpg"
 ---
 

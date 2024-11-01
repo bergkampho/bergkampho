@@ -1,6 +1,7 @@
 ---
 index: 2
-title: IPC++ Foodlab
+title: IPC++ Foodlab Restaurant Website
+description: CMS built for restaurant. Eases menu updates. Boosts customer engagement.
 tags: ["responsive", "wordpress"]
 image: "./img/ipcfoodlab.jpg"
 ---

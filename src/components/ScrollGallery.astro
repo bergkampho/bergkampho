@@ -59,6 +59,7 @@ const projectEntries = await getCollection("project");
   .card {
     width: var(--item-width);
     scroll-snap-align: start; /* Align cards on scroll */
+    transition: width ease 0.5s;
   }
 </style>
 <div class="scroll-container sm:py-5" data-aos="fade-in">
@@ -71,6 +72,7 @@ const projectEntries = await getCollection("project");
             <Project
               image={entry.data.image}
               title={entry.data.title}
+              description={entry.data.description}
               tags={entry.data.tags}
               slug={entry.slug}
             />

@@ -1,6 +1,7 @@
 ---
 index: 5
-title: CBI SKY
+title: CBI SKY CRM System
+description: Customised business workflows. Sync 5,000+ due diligence service data using Microsoft Graph API. 
 tags: ["full-stack", "cloud-services"]
 image: "./img/cbi-sky.jpg"
 ---

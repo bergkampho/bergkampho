@@ -46,6 +46,7 @@ export default {
       backgroundColor: {
         skin: {
           fill: "var(--bg-fill-color)",
+          pop: "var(--bg-pop-color)",
         },
       },
     },

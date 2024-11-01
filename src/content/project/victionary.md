@@ -1,6 +1,7 @@
 ---
 index: 3
 title: viction:ary Online Store
+description: WordPress-based ecommerce solution, selling 1,000+ items with advanced filtering options.
 tags: ["woocommerce", "wordpress"]
 image: "./img/victionary.jpg"
 ---

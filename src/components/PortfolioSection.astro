@@ -2,10 +2,30 @@
 import ScrollGallery from "./ScrollGallery.astro";
 ---
 
+<style is:global>
+  .card-cbi-sky {
+    --bg-pop-color: hsl(210, 100%, 27%);
+    --body-base-color: hsl(210, 90%, 90%);
+    --body-pop-color: var(--color-gray-50);
+  }
+  .dark .card-cbi-sky {
+    --bg-pop-color: hsl(210 100% 13%);
+    --body-base-color: hsl(193, 93%, 82%);
+  }
+
+  .card-you-biz {
+    --bg-pop-color: hsl(300, 100%, 89%);
+    --body-base-color: hsl(262 45% 33%);
+  }
+  .dark .card-you-biz {
+    --bg-pop-color: hsl(262 45% 24%);
+    --body-base-color: hsl(300, 100%, 79%);
+  }
+</style>
 <section id="portfolio" class="bg-skin-fill pb-16">
   <div class="container">
     <h2 class="text-lg leading-none" data-aos="fade-in">
-      Here’s a few of my work.
+      Here’s a few successful projects.
     </h2>
   </div>
   <ScrollGallery />
